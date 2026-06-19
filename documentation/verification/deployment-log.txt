@@ -1,0 +1,115 @@
+==================================================
+Azure ARM Deployment Verification Log
+==================================================
+
+Deployment Name:
+VMDeployment
+
+Resource Group:
+ARMDeploymentRG
+
+Deployment Method:
+Azure Resource Manager Template (ARM)
+
+Deployment Tool:
+Azure CLI
+
+Deployment Date:
+2026-06-19
+
+==================================================
+Deployment Status
+==================================================
+
+Provisioning State:
+Succeeded
+
+Deployment completed successfully.
+
+==================================================
+Deployed Resources
+==================================================
+
+Virtual Machine:
+myWindowsVM
+
+Operating System:
+Windows Server 2022
+
+Virtual Network:
+myWindowsVM-vnet
+
+Subnet:
+default
+
+Network Interface:
+myWindowsVM-nic
+
+Public IP Address:
+20.xxx.xxx.xxx
+
+Network Security Group:
+myWindowsVM-nsg
+
+==================================================
+VM Status Verification
+==================================================
+
+Power State:
+VM running
+
+RDP Port:
+3389/TCP
+
+Connectivity Test:
+Successful
+
+Connection Method:
+Remote Desktop Protocol (RDP)
+
+==================================================
+Azure CLI Commands Used
+==================================================
+
+Resource Group Creation:
+
+az group create \
+--name ARMDeploymentRG \
+--location eastus
+
+
+ARM Deployment:
+
+az deployment group create \
+--resource-group ARMDeploymentRG \
+--template-file azuredeploy.json \
+--parameters azuredeploy.parameters.json
+
+
+VM Status Check:
+
+az vm get-instance-view \
+--resource-group ARMDeploymentRG \
+--name myWindowsVM
+
+
+Retrieve Public IP:
+
+az vm show \
+--resource-group ARMDeploymentRG \
+--name myWindowsVM \
+--show-details \
+--query publicIps
+
+==================================================
+Result
+==================================================
+
+Deployment Result:
+SUCCESS
+
+Windows VM Deployment:
+COMPLETED
+
+Remote Desktop Verification:
+SUCCESS

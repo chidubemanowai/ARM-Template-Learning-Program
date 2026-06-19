@@ -1,0 +1,30 @@
+{
+  "publicIPAddress": {
+    "type": "String",
+    "value": "20.100.50.25"
+  },
+  "virtualMachineName": {
+    "type": "String",
+    "value": "myWindowsVM"
+  },
+  "virtualMachineResourceId": {
+    "type": "String",
+    "value": "/subscriptions/<SUBSCRIPTION_ID>/resourceGroups/ARMDeploymentRG/providers/Microsoft.Compute/virtualMachines/myWindowsVM"
+  },
+  "networkInterfaceId": {
+    "type": "String",
+    "value": "/subscriptions/<SUBSCRIPTION_ID>/resourceGroups/ARMDeploymentRG/providers/Microsoft.Network/networkInterfaces/myWindowsVM-nic"
+  },
+  "virtualNetworkId": {
+    "type": "String",
+    "value": "/subscriptions/<SUBSCRIPTION_ID>/resourceGroups/ARMDeploymentRG/providers/Microsoft.Network/virtualNetworks/myWindowsVM-vnet"
+  },
+  "resourceGroup": {
+    "type": "String",
+    "value": "ARMDeploymentRG"
+  },
+  "deploymentStatus": {
+    "type": "String",
+    "value": "Succeeded"
+  }
+}
